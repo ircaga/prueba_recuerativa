@@ -1,0 +1,37 @@
+#OPCION 1
+def registrar_pacientes():
+
+  lista_paciente=[]
+nombre_completo =input("ingrese nombre completo paciente o escribir BASTA para terminar\n")
+while nombre_completo != 'BASTA':
+
+          nombre_completo =input("ingrese nombre completo paciente\n")
+
+#opcion 2
+def ingresar_edad():
+  edad = int(input("Ingrese edad "))
+  if(edad>=18):
+    print("Usted es mayor de edad")
+  return edad
+  #opcion3
+def ingresar_si_esta_casado():
+  esta_casado = input("Ingrese V/F si esta o no casado ")
+  if(esta_casado == "V"):
+    print(" Usted esta casado")
+  return esta_casado
+def es_masculino_o_femenino():
+  es_masculino_femenino = input("Ingrese F/M si es Femenino o Masculino")
+  if(es_masculino_femenino == "F"):
+    print("Usted es de sexo femenino")
+
+#PROGRAMA PRINCIPAL
+
+try:
+
+  edad = ingresar_edad()
+  casado = ingresar_si_esta_casado()
+  print(f'Casado: {casado}')
+  if(int(edad) <= 18 and casado == "V"):
+    es_masculino_o_femenino()
+except:
+  print("Ha ocurrido un error")
